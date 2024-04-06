@@ -1,10 +1,10 @@
 import React , {useState} from "react";
-import draggable from "react-draggable";
+import Draggable from "react-draggable";
 const Text = () => {
     const [editMode, setEditMode] = useState(false);
     const [val, setVal] = useState("Double Click to Edit");
   return (
-    <draggable>
+    <Draggable>
       editMode ? (
         <input  onDoubleClick={e => setEditMode(false)} 
         value={val}
@@ -12,7 +12,7 @@ const Text = () => {
         />
         ) : ( 
           <h1 onDoubleClick={(e) => setEditMode(true)}>{val}</h1>)
-    </draggable>
+    </Draggable>
   );
 };
 
